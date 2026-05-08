@@ -1,0 +1,31 @@
+{
+  "name": "ai-research-agent-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --watch-path=src src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test test/**/*.test.js",
+    "check": "node --check src/server.js && node --check src/controllers/researchController.js && node --check src/controllers/sessionController.js && node --check src/controllers/documentController.js && node --check src/controllers/researchHistoryController.js && node --check src/routes/researchRoutes.js && node --check src/routes/sessionRoutes.js && node --check src/routes/documentRoutes.js && node --check src/routes/researchHistoryRoutes.js && node --check src/services/tavilyService.js && node --check src/services/geminiService.js && node --check src/services/documentService.js && node --check src/services/credibilityService.js && node --check src/db/database.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.30.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "firebase-admin": "^14.4.0",
+    "jsonwebtoken": "^9.0.3",
+    "mammoth": "^1.12.3",
+    "multer": "^2.4.0",
+    "nodemailer": "^10.0.10",
+    "pdf-parse": "^2.4.5",
+    "resend": "^6.28.1",
+    "tesseract.js": "^7.0.0"
+  },
+  "overrides": {
+    "jose": "4.15.9"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
